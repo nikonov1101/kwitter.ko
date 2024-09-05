@@ -4,9 +4,12 @@ kwitter
 Allows user to access a russian-speaking segment 
 of Twitter right from the Linux kernel.
 
+Note that it was build for kernel version 6.9.3
+and wasn't carefully tested against a whole 
+corpus of the supported versions. 
 
 give it a try:
-
+	apt install linux-header-$(uname -r)
 	make 
 	insmod kwitter.ko
 	cat /dev/kwitter
