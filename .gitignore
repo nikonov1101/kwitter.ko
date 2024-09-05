@@ -1,0 +1,15 @@
+.Module.symvers.cmd
+.kwitter.ko.cmd
+.kwitter.mod.cmd
+.kwitter.mod.o.cmd
+.kwitter.o.cmd
+.main.o.cmd
+.modules.order.cmd
+Module.symvers
+kwitter.ko
+kwitter.mod
+kwitter.mod.c
+kwitter.mod.o
+kwitter.o
+main.o
+modules.order

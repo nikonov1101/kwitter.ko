@@ -1,0 +1,13 @@
+kwitter
+=======
+
+Allows user to access a russian-speaking segment 
+of Twitte right from the Linux kernel.
+
+
+give it a try:
+
+	make 
+	insmod kwitter.ko
+	cat /dev/kwitter
+
