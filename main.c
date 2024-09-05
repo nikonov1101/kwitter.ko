@@ -5,6 +5,7 @@
 #include <linux/kernel.h>
 #include <linux/uaccess.h>
 #include <linux/fs.h>
+#include <linux/version.h>
 
 static int kwitter_open(struct inode *inode, struct file *file);
 static int kwitter_release(struct inode *inode, struct file *file);
@@ -33,7 +34,11 @@ static int __init kwitter_init(void)
 
 	dev_major = MAJOR(dev);
 
+#if LINUX_VERSION_CODE > KERNEL_VERSION(6, 3, 0)
 	kwitter_class = class_create("kwitter");
+#else
+	kwitter_class = class_create(THIS_MODULE, "kwitter");
+#endif
 
 	cdev_init(&cdev, &kwitter_fops);
 	cdev.owner = THIS_MODULE;
